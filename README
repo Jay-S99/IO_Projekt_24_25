@@ -21,4 +21,4 @@ Podział pracy:
 	•	Osoba 3: System wypożyczeń, zwrotów, a także generowanie raportów o aktywności w bibliotece.
 
 Trudność:
-System będzie wymagał zarządzania bazą danych (np. w pliku tekstowym lub w prostym systemie bazodanowym), co czyni projekt bardziej skomplikowanym niż kalkulator. Z kolei brak skomplikowanej grafiki i rozbudowanej logiki powoduje, że jest łatwiejszy od Tetrisa.
+System będzie wymagał zarządzania bazą danych (np. w pliku tekstowym lub w prostym systemie bazodanowym), co czyni projekt bardziej skomplikowanym na poziomie logicznym. Z kolei brak skomplikowanej grafiki i rozbudowanej logiki powoduje, brak skomplikowanego programowania z użyciem bibliotek graficznych (QT, sdl2).

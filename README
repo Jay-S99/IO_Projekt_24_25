@@ -1,0 +1,24 @@
+Nie mamy pojęcia od czego zacząć prócz podzielenia sie obowiązkami. Nie przedłużając ma to wyglądać mniej więcej tak:
+Opis projektu:
+Stworzenie aplikacji do zarządzania biblioteką, gdzie można wypożyczać, zwracać i wyszukiwać książki, a także śledzić konta użytkowników.
+
+Kluczowe elementy:
+	•	Książki: możliwość dodawania, usuwania, wyszukiwania książek.
+
+	•	Użytkownicy: system kont użytkowników, którzy mogą wypożyczać książki.
+
+	•	Wypożyczanie i zwroty: użytkownicy mogą wypożyczać książki na określony czas i zwracać je.
+
+	•	Historia wypożyczeń: możliwość przeglądania historii wypożyczeń użytkownika.
+
+	•	Raporty: generowanie raportów o najczęściej wypożyczanych książkach i aktywności użytkowników.
+
+Podział pracy:
+	•	Osoba 1: Projektowanie i implementacja systemu zarządzania książkami (dodawanie, usuwanie, wyszukiwanie).
+
+	•	Osoba 2: Implementacja systemu kont użytkowników i zarządzania nimi (logowanie, historia wypożyczeń).
+
+	•	Osoba 3: System wypożyczeń, zwrotów, a także generowanie raportów o aktywności w bibliotece.
+
+Trudność:
+System będzie wymagał zarządzania bazą danych (np. w pliku tekstowym lub w prostym systemie bazodanowym), co czyni projekt bardziej skomplikowanym niż kalkulator. Z kolei brak skomplikowanej grafiki i rozbudowanej logiki powoduje, że jest łatwiejszy od Tetrisa.

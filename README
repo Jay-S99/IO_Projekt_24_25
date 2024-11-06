@@ -24,3 +24,30 @@ Trudność:
 System będzie wymagał zarządzania bazą danych (np. w pliku tekstowym lub w prostym systemie bazodanowym), co czyni projekt bardziej skomplikowanym na poziomie logicznym. Z kolei brak skomplikowanej grafiki i rozbudowanej logiki powoduje, brak skomplikowanego programowania z użyciem bibliotek graficznych (QT, sdl2).
 Wymagania:
 Kofeina (Kawa), Visual Studio 2022, znajomość c++, umiejętność znajdywania odpowiedzi (googlowanie).
+
+Diagram:
++------------------------+
+
+|       Biblioteka       |
+
++------------------------+
+
+| - listaKsiazek         |
+
+| - listaUzytkownikow    |
+
++------------------------+
+
+| + dodajKsiazke()       |
+
+| + usunKsiazke()        |
+
+| + znajdzKsiazke()      |
+
+| + dodajUzytkownika()   |
+
+| + usunUzytkownika()    |
+
+| + wyswietlKsiazki()    |
+
++------------------------+

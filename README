@@ -17,7 +17,7 @@ Podział pracy:
 	•	Osoba 1: Projektowanie i implementacja systemu zarządzania książkami (dodawanie, usuwanie, wyszukiwanie)
 			Stworzenie struktury i klas. Finished.
 			Dopełnienie kodu klasy. In Progress.
-	•	Osoba 2: Implementacja systemu kont użytkowników i zarządzania nimi (logowanie, historia wypożyczeń) IN PROGRESS.
+	•	Osoba 2: Implementacja systemu kont użytkowników i zarządzania nimi (logowanie, historia wypożyczeń)
 			Stworzenie struktury i klas. Finished.
 			Dopełnienie kodu klasy. In Progress.
 	•	Osoba 3: System wypożyczeń, zwrotów, a także generowanie raportów o aktywności w bibliotece.

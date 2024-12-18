@@ -14,10 +14,12 @@ Kluczowe elementy:
 	•	Raporty: generowanie raportów o najczęściej wypożyczanych książkach i aktywności użytkowników.
 
 Podział pracy:
-	•	Osoba 1: Projektowanie i implementacja systemu zarządzania książkami (dodawanie, usuwanie, wyszukiwanie) IN PROGRESS.
-
+	•	Osoba 1: Projektowanie i implementacja systemu zarządzania książkami (dodawanie, usuwanie, wyszukiwanie)
+			Stworzenie struktury i klas. Finished.
+			Dopełnienie kodu klasy. In Progress.
 	•	Osoba 2: Implementacja systemu kont użytkowników i zarządzania nimi (logowanie, historia wypożyczeń) IN PROGRESS.
-
+			Stworzenie struktury i klas. Finished.
+			Dopełnienie kodu klasy. In Progress.
 	•	Osoba 3: System wypożyczeń, zwrotów, a także generowanie raportów o aktywności w bibliotece.
 
 Trudność:

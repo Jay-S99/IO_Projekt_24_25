@@ -1,31 +1,69 @@
+#pragma once
 #include <iostream>
 #include <vector>
 #include <string>
 #include <unordered_map>
-#include "UserSystem.h"
 
 using namespace std;
 
-int main() {
-    UserSystem system;
+class UserSystem : User
+{
+private:
+    unordered_map <int, User> users;
 
-    system.addUser(1, "Jan", "Kowalski");
-    system.addUser(2, "Anna", "Nowak");
-
-    system.showUsers();
-
-    User* user = system.login(1);
-    if (user)
+public:
+    void addUser(int id, const string& name, const string& surname)
     {
-        user->addToHistory("Pan Tadeusz");
-        user->addToHistory("W pustyni i w puszczy");
-
-        user->showHistory();
+        if (users.find(id) != users.end())
+        {
+            cout << "User with ID:  " << id << " already exist.\n";
+        }
+        else
+        {
+            users[id] = User(id, name, surname);
+            cout << "Added user: " << name << " " << surname << " (ID: " << id << ").\n";
+        }
     }
 
-    system.deleteUser(1);
+    void deleteUser(int id)
+    {
+        if (users.erase(id))
+        {
+            cout << "User with ID: " << id << "has been deleted.\n";
+        }
+        else
+        {
+            cout << "User with ID " << id << " doesn't exist.\n";
+        }
+    }
 
-    system.login(1);
+    User* login(int id) {
+        auto it = users.find(id);
+        if (it != users.end())
+        {
+            return &it->second;
+        }
+        else
+        {
+            cout << "User with ID " << id << " doesn't exist.\n";
+            return nullptr;
+        }
+    }
 
-    return 0;
-}
+    void showUsers() const
+    {
+        if (users.empty())
+        {
+            cout << "No users in the system.\n";
+        }
+        else {
+            cout << "User list:\n";
+            for (const auto& para : users)
+            {
+                const auto& user = para.second;
+                cout << "ID: " << user.getID() << ", name: " << user.getName()
+                    << ", surname: " << user.getSurname() << "\n";
+            }
+        }
+    }
+};

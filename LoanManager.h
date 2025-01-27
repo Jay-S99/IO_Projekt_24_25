@@ -4,14 +4,14 @@
 #include <string>
 #include <unordered_map>
 #include "BookManager.h"
-#include "UserManager.h"
+#include "User.h"
 
 using namespace std;
 
 class LoanManager {
 private:
-    unordered_map<int, int> loans; // mapa: klucz (id u¿ytkownika) -> id ksi¹¿ki
-    const string loanFilename;    // plik do zapisywania wypo¿yczeñ
+    unordered_map<int, int> loans; // mapa: klucz (id uÂ¿ytkownika) -> id ksiÂ¹Â¿ki
+    const string loanFilename;    // plik do zapisywania wypoÂ¿yczeÃ±
 
     // Wczytywanie danych z pliku
     void loadFromFile();
@@ -22,9 +22,9 @@ public:
     LoanManager(const string& file);
     ~LoanManager();
 
-    // Wypo¿yczenie ksi¹¿ki
+    // WypoÂ¿yczenie ksiÂ¹Â¿ki
     void borrowBook(int userId, int bookId, BookManager& bookManager, UserManager& user);
-    // Zwrot ksi¹¿ki
+    // Zwrot ksiÂ¹Â¿ki
     void returnBook(int userId, int bookId, BookManager& bookManager, UserManager& user);
     // Generowanie raportu
     void generateReport(const BookManager& bookManager, const UserManager& user) const;

@@ -20,7 +20,7 @@ public:
         }
         else
         {
-            users[id] = users(id, name, surname);
+            users[id] = User(id, name, surname);
             cout << "Added user: " << name << " " << surname << " (ID: " << id << ").\n";
         }
     }
@@ -61,8 +61,8 @@ public:
             for (const auto& para : users)
             {
                 const auto& user = para.second;
-                cout << "ID: " << user.getId() << ", name: " << name.getImie()
-                    << ", surname: " << user.getNazwisko() << "\n";
+                cout << "ID: " << user.getID() << ", name: " << user.getName()
+                    << ", surname: " << user.getSurname() << "\n";
             }
         }
     }

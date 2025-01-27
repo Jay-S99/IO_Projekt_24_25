@@ -7,7 +7,7 @@
 using namespace std;
 
 
-class UserManager : Book //u¿ytkownik
+class User : Book //u¿ytkownik
 {
 private:
 	int id;
@@ -16,7 +16,7 @@ private:
 	vector<string> LoanHistory; //implementacja historii wypo¿yczeñ
 
 public:
-	UserManager(int id, const string& name, const string& surname) //konstruktor
+	User(int id, const string& name, const string& surname) //konstruktor
 		: id(id), name(name), surname(surname) {}
 
 	int getID() const { return id; }

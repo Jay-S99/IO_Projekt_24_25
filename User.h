@@ -7,13 +7,13 @@
 using namespace std;
 
 
-class UserManager : Book //u¿ytkownik
+class UserManager : Book //uÂ¿ytkownik
 {
 private:
 	int id;
 	string name;
 	string surname;
-	vector<string> LoanHistory; //implementacja historii wypo¿yczeñ
+	vector<string> LoanHistory; //implementacja historii wypoÂ¿yczeÃ±
 
 public:
 	UserManager(int id, const string& name, const string& surname) //konstruktor

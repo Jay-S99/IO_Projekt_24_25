@@ -16,12 +16,12 @@ public:
     {
         if (users.find(id) != users.end())
         {
-            cout << "User with ID:  " << id << " already exist.\n";
+            cout << "Uzytkownik o numerze:  " << id << " juz istnieje.\n";
         }
         else
         {
             users[id] = User(id, name, surname);
-            cout << "Added user: " << name << " " << surname << " (ID: " << id << ").\n";
+            cout << "Dodano uzytkownika: " << name << " " << surname << " (ID: " << id << ").\n";
         }
     }
 
@@ -29,11 +29,11 @@ public:
     {
         if (users.erase(id))
         {
-            cout << "User with ID: " << id << "has been deleted.\n";
+            cout << "Uzytkownik o numerze: " << id << "zostal usuniety.\n";
         }
         else
         {
-            cout << "User with ID " << id << " doesn't exist.\n";
+            cout << "Uzytkownik o numerze " << id << " nie istnieje.\n";
         }
     }
 
@@ -45,7 +45,7 @@ public:
         }
         else
         {
-            cout << "User with ID " << id << " doesn't exist.\n";
+            cout << "Uzytkownik o numerze " << id << " nie istnieje.\n";
             return nullptr;
         }
     }
@@ -54,15 +54,15 @@ public:
     {
         if (users.empty())
         {
-            cout << "No users in the system.\n";
+            cout << "Brak uzytkownikow w systemie.\n";
         }
         else {
-            cout << "User list:\n";
+            cout << "Lista uzytkownikow:\n";
             for (const auto& para : users)
             {
                 const auto& user = para.second;
-                cout << "ID: " << user.getID() << ", name: " << user.getName()
-                    << ", surname: " << user.getSurname() << "\n";
+                cout << "ID: " << user.getID() << ", imie: " << user.getName()
+                    << ", nazwisko: " << user.getSurname() << "\n";
             }
         }
     }

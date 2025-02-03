@@ -8,33 +8,33 @@
 using namespace std;
 
 
-class User: Book //uzytkownik
+class User: Book
 {
 private:
     int id;
     string name;
     string surname;
-    vector<string> LoanHistory; //implementacja historii wypozyczeñ
+    vector<string> LoanHistory;
 
 public:
 
     User() : id(0), name(""), surname("") {}
 
-    User(int id, const string& name, const string& surname) //konstruktor
+    User(int id, const string& name, const string& surname)
         : id(id), name(name), surname(surname) {}
 
     int getID() const { return id; }
     string getName() const { return name; }
-    string getSurname() const { return surname; } //odczytywanie wartosci
+    string getSurname() const { return surname; }
 
-    void addToHistory(const string& book) { //dodawanie ksiazki do historii wypozyczen
+    void addToHistory(const string& book) {
         LoanHistory.push_back(book);
     }
 
     void showHistory() const {
-        cout << "Loan history for " << name << " " << surname << " (ID: " << id << "):\n";
+        cout << "Historia wypozyczen dla " << name << " " << surname << " (ID: " << id << "):\n";
         if (LoanHistory.empty())
-            cout << "Loan history is empty.\n";
+            cout << "Historia wypozyczen pusta.\n";
         else {
             for (const auto& book : LoanHistory) {
                 cout << "- " << book << "\n";

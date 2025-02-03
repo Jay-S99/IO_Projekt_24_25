@@ -36,4 +36,5 @@ public:
     void searchBook(const string& keyword) const;
     void displayBooks() const;
     void updateAvailability(int id, bool availability);
+void addBook(int id, const string& title, const string& author, bool available);
 };

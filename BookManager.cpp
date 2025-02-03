@@ -62,28 +62,28 @@ void BookManager::removeBook(int id) {
     auto it = remove_if(books.begin(), books.end(), [id](const Book& book) { return book.id == id; });
     if (it != books.end()) {
         books.erase(it, books.end());
-        cout << "Book with ID " << id << " has been removed.\n";
+        cout << "Ksiazka o ID " << id << " zostala usunieta.\n";
     }
     else {
-        cout << "No book found with ID " << id << ".\n";
+        cout << "Nie znaleziono ksiazki o ID " << id << ".\n";
     }
 }
 
 void BookManager::searchBook(const string& keyword) const {
-    cout << "Search results for: " << keyword << "\n";
+    cout << "Wyniki wyszukiwania dla: " << keyword << "\n";
     for (const auto& book : books) {
         if (book.title.find(keyword) != string::npos || book.author.find(keyword) != string::npos) {
-            cout << "ID: " << book.id << " | Title: " << book.title << " | Author: " << book.author
-                << " | Available: " << (book.isAvilable ? "Yes" : "No") << "\n";
+            cout << "ID: " << book.id << " | Tytul: " << book.title << " | Autor: " << book.author
+                << " | Dostepna: " << (book.isAvilable ? "Tak" : "Nie") << "\n";
         }
     }
 }
 
 void BookManager::displayBooks() const {
-    cout << "Book List:\n";
+    cout << "Lista ksiazek:\n";
     for (const auto& book : books) {
-        cout << "ID: " << book.id << " | Title: " << book.title << " | Author: " << book.author
-            << " | Available: " << (book.isAvilable ? "Yes" : "No") << "\n";
+        cout << "ID: " << book.id << " | Tytul: " << book.title << " | Autor: " << book.author
+            << " | Dostepna: " << (book.isAvilable ? "Tak" : "Nie") << "\n";
     }
 }
 
@@ -91,9 +91,19 @@ void BookManager::updateAvailability(int id, bool availability) {
     for (auto& book : books) {
         if (book.id == id) {
             book.isAvilable = availability;
-            cout << "Availability of book with ID " << id << " updated to " << (availability ? "Available" : "Not Available") << ".\n";
+            cout << "Dostepnosc ksiazki o ID " << id << " zmieniona na " << (availability ? "Dostepna" : "Niedostepna") << ".\n";
             return;
         }
     }
-    cout << "No book found with ID " << id << ".\n";
+    cout << "Nie znaleziono ksiazki o ID " << id << ".\n";
+}
+void BookManager::addBook(int id, const string& title, const string& author, bool available) {
+    ofstream outFile("books.txt", ios::app);
+    if (!outFile) {
+        cerr << "Blad: Brak mozliwosci otworzenia pliku.\n";
+        return;
+    }
+    outFile << id << "," << title << "," << author << "," << available << "\n";
+    outFile.close();
+    cout << "Ksiazka dodana!.\n";
 }

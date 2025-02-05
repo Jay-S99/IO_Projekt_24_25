@@ -1,0 +1,34 @@
+[==========] Running 7 tests from 4 test cases.
+[----------] Global test environment set-up.
+[----------] 2 tests from UserManagerTest
+[ RUN      ] UserManagerTest.AddUser
+[       OK ] UserManagerTest.AddUser (9 ms)
+[ RUN      ] UserManagerTest.FindUser
+[       OK ] UserManagerTest.FindUser (0 ms)
+[----------] 2 tests from UserManagerTest (10 ms total)
+
+[----------] 2 tests from BookManagerTest
+[ RUN      ] BookManagerTest.AddBook
+C:\Users\JSzuran\Desktop\biboloteka\biboloteka-Test1\test.cpp(51): error: Value of: output.find("Pan Tadeusz") != string::npos
+  Actual: false
+Expected: true
+[  FAILED  ] BookManagerTest.AddBook (8 ms)
+[ RUN      ] BookManagerTest.SearchBook
+[       OK ] BookManagerTest.SearchBook (0 ms)
+[----------] 2 tests from BookManagerTest (8 ms total)
+
+[----------] 2 tests from LoanManagerTest
+[ RUN      ] LoanManagerTest.LoanBook
+Ksiazka wypozyczona!
+[       OK ] LoanManagerTest.LoanBook (24 ms)
+[ RUN      ] LoanManagerTest.ReturnBook
+Ksiazka wypozyczona!
+Ksiazka zwrocona!
+C:\Users\JSzuran\Desktop\biboloteka\biboloteka-Test1\test.cpp(93): error: Value of: output.find("Ksiazka zwrocona!") != string::npos
+  Actual: false
+Expected: true
+[  FAILED  ] LoanManagerTest.ReturnBook (17 ms)
+[----------] 2 tests from LoanManagerTest (41 ms total)
+
+[----------] 1 test from UserSystemTest
+[ RUN      ] UserSystemTest.AddAndShowBook

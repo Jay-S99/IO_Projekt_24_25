@@ -1,18 +1,15 @@
-#ifndef BOOK_H
-#define BOOK_H
-
 #include <string>
+
+using namespace std;
 
 class Book {
 public:
     Book(const std::string& title, const std::string& author) : title(title), author(author) {}
 
-    std::string getTitle() const { return title; }
-    std::string getAuthor() const { return author; }
+    string getTitle() const { return title; }
+    string getAuthor() const { return author; }
 
 private:
-    std::string title;
-    std::string author;
+    string title;
+    string author;
 };
-
-#endif

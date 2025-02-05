@@ -1,3 +1,6 @@
+#ifndef BOOKMANAGER_H
+#define BOOKMANAGER_H
+
 #include "Book.h"
 #include <vector>
 #include <string>
@@ -17,3 +20,5 @@ public:
 private:
     vector<Book> books;
 };
+
+#endif

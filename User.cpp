@@ -1,17 +1,19 @@
 #include "User.h"
 #include <iostream>
 
-void User::addLoan(const std::string& bookTitle) {
+using namespace std;
+
+void User::addLoan(const string& bookTitle) {
     loanHistory.push_back(bookTitle);
 }
 
-void User::returnBook(const std::string& bookTitle) {
-    loanHistory.erase(std::remove(loanHistory.begin(), loanHistory.end(), bookTitle), loanHistory.end());
+void User::returnBook(const string& bookTitle) {
+    loanHistory.erase(remove(loanHistory.begin(), loanHistory.end(), bookTitle), loanHistory.end());
 }
 
 void User::showLoanHistory() const {
-    std::cout << "Historia wypozyczen dla uzytkownika " << username << ":" << std::endl;
+    cout << "Historia wypozyczen dla uzytkownika " << username << ":" << endl;
     for (const auto& book : loanHistory) {
-        std::cout << book << std::endl;
+        cout << book << endl;
     }
 }

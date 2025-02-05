@@ -27,7 +27,7 @@ int main() {
     int choice;
     do {
         clearScreen();
-        cout << "-------BookHub-------" << 
+        cout << "-------BookHub-------" << endl;
         cout << "Wybierz dzialanie:" << endl;
         cout << "1. Wyswietl wszystkie ksiazki" << endl;
         cout << "2. Dodaj ksiazke" << endl;

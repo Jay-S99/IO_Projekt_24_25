@@ -1,3 +1,6 @@
+#ifndef LOANMANAGER_H
+#define LOANMANAGER_H
+
 #include "Book.h"
 #include "BookManager.h"
 #include <iostream>
@@ -14,3 +17,5 @@ public:
     void loanBook(const Book& book, const std::string& username);
     void returnBook(const Book& book, const std::string& username);
 };
+
+#endif

@@ -100,7 +100,6 @@ void LoanManager::returnBook(const Book& book, const std::string& username) {
         return;
     }
 
-    // Teraz dodajemy książkę do pliku books.txt
     std::ofstream booksFile("books.txt", std::ios::app);
     if (!booksFile.is_open()) {
         std::cout << "Blad otwierania pliku books.txt!" << std::endl;

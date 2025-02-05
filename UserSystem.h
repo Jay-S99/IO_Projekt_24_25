@@ -1,9 +1,8 @@
-#ifndef USERSYSTEM_H
-#define USERSYSTEM_H
-
 #include "BookManager.h"
 #include "UserManager.h"
 #include "LoanManager.h"
+
+using namespace std;
 
 class UserSystem {
 public:
@@ -22,5 +21,3 @@ private:
     UserManager& userManager;
     LoanManager& loanManager;
 };
-
-#endif

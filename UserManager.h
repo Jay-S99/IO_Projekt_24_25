@@ -1,3 +1,6 @@
+#ifndef USERMANAGER_H
+#define USERMANAGER_H
+
 #include <vector>
 #include <string>
 #include "User.h"
@@ -9,7 +12,9 @@ public:
     void addUser(const User& user);
     User* findUser(const std::string& username);
     void showAllUsers();
-    
+
 private:
     std::vector<User> users;
 };
+
+#endif

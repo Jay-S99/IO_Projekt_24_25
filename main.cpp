@@ -10,15 +10,11 @@
 using namespace std;
 
 void clearScreen() {
-#ifdef _WIN32
     system("cls");
-#else
-    system("clear");
-#endif
 }
 
 int main() {
-    SetConsoleOutputCP(65001); // Ustawienie konsoli na UTF-8
+    SetConsoleOutputCP(65001);
 
     BookManager bookManager;
     UserManager userManager;
@@ -31,6 +27,7 @@ int main() {
     int choice;
     do {
         clearScreen();
+        cout << "-------BookHub-------" << 
         cout << "Wybierz dzialanie:" << endl;
         cout << "1. Wyswietl wszystkie ksiazki" << endl;
         cout << "2. Dodaj ksiazke" << endl;

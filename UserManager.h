@@ -1,6 +1,3 @@
-#ifndef USERMANAGER_H
-#define USERMANAGER_H
-
 #include <vector>
 #include <string>
 #include "User.h"
@@ -16,5 +13,3 @@ public:
 private:
     std::vector<User> users;
 };
-
-#endif
